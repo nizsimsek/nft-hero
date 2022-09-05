@@ -26,7 +26,7 @@ const Hero = () => {
           creation. Signed and issued by the creator, made possible by
           blockchain technology
         </span>
-        <div className="flex mt-8">
+        <div className="flex mt-8 justify-center md:justify-start">
           <Button shadow size="lg" auto color="secondary" rounded>
             Let&apos;s Explore
           </Button>

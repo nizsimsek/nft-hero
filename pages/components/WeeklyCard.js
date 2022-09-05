@@ -3,9 +3,9 @@ import { Button } from '@nextui-org/react';
 
 const WeeklyCard = ({ fullName, username, price, nft }) => {
   return (
-    <div className="relative">
+    <div className="relative min-w-[300px]">
       <div className="m-auto -z-10 w-5/6 h-full">
-        <Image src={nft} alt={fullName} responsive />
+        <Image src={nft} alt={fullName} responsive="true" />
       </div>
       <div
         style={{
@@ -22,11 +22,11 @@ const WeeklyCard = ({ fullName, username, price, nft }) => {
         }}
       >
         <div className="flex flex-col whitespace-nowrap w-1/2">
-          <h3 className="m-0">{fullName}</h3>
+          <span className="m-0 font-bold md:text-base xl:text-2xl">{fullName}</span>
           <span className="text-slate-500">@{username}</span>
-          <span className="text-[#F7FC0E] font-bold text-xl">{price}</span>
+          <span className="text-[#F7FC0E] font-bold  md:text-base xl:text-xl">{price}</span>
         </div>
-        <div className="flex justify-end w-1/2">
+        <div className="flex justify-end self-end w-1/2">
           <Button auto color="gradient" rounded>
             Collect Now
           </Button>

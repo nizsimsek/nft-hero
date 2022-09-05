@@ -36,12 +36,12 @@ const WeeklyTrends = () => {
 
   return (
     <div className="bg-black flex flex-wrap justify-center text-white p-16">
-      <div className="w-1/2 text-center">
-        <span className="text-6xl font-bold max-w-[600px]">
+      <div className="w-full lg:w-1/2 xl:w-1/2 text-center">
+        <span className="text-3xl md:text-6xl lg:text-6xl xl:text-6xl font-bold max-w-[600px]">
           Trending This Week
         </span>
       </div>
-      <div className="w-1/2 px-6">
+      <div className="w-full lg:w-1/2 xl:w-1/2 px-6 mt-3 lg:m-0 xl:m-0">
         <span className="text-lg text-gray-500 max-w-[500px]">
           Various kinds of Artwork categories that are trending this week. The
           trend will be reset every week. Don’t miss out on the best artworks
