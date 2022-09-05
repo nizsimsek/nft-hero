@@ -1,39 +1,39 @@
-import Image from 'next/image';
-import Weekly1 from './../../public/img/Weekly1.svg';
-import Weekly2 from './../../public/img/Weekly2.svg';
-import Weekly3 from './../../public/img/Weekly3.svg';
-import Weekly4 from './../../public/img/Weekly4.svg';
-import { css, Button, Grid, Spacer } from '@nextui-org/react';
-import WeeklyCard from './WeeklyCard';
+import Image from 'next/image'
+import Weekly1 from '@public/img/Weekly1.svg'
+import Weekly2 from '@public/img/Weekly2.svg'
+import Weekly3 from '@public/img/Weekly3.svg'
+import Weekly4 from '@public/img/Weekly4.svg'
+import { css, Button, Grid, Spacer } from '@nextui-org/react'
+import WeeklyCard from './WeeklyCard'
+
+const weeklyTrends = [
+  {
+    fullName: 'Miles Grogosters',
+    username: 'rominolegs',
+    price: '4.99 ETH',
+    nft: Weekly1
+  },
+  {
+    fullName: 'Reox Fancxy',
+    username: 'hibnastiar',
+    price: '3.27 ETH',
+    nft: Weekly2
+  },
+  {
+    fullName: 'Miles Grogosters',
+    username: 'senjadisini',
+    price: '4.20 ETH',
+    nft: Weekly3
+  },
+  {
+    fullName: 'Tuinz Rey',
+    username: 'albertov',
+    price: '2.99 ETH',
+    nft: Weekly4
+  }
+]
 
 const WeeklyTrends = () => {
-  const weeklyTrends = [
-    {
-      fullName: 'Miles Grogosters',
-      username: 'rominolegs',
-      price: '4.99 ETH',
-      nft: Weekly1,
-    },
-    {
-      fullName: 'Reox Fancxy',
-      username: 'hibnastiar',
-      price: '3.27 ETH',
-      nft: Weekly2,
-    },
-    {
-      fullName: 'Miles Grogosters',
-      username: 'senjadisini',
-      price: '4.20 ETH',
-      nft: Weekly3,
-    },
-    {
-      fullName: 'Tuinz Rey',
-      username: 'albertov',
-      price: '2.99 ETH',
-      nft: Weekly4,
-    },
-  ];
-
   return (
     <div className="bg-black flex flex-wrap justify-center text-white p-16">
       <div className="w-full lg:w-1/2 xl:w-1/2 text-center">
@@ -68,11 +68,11 @@ const WeeklyTrends = () => {
                 nft={item.nft}
               />
             </Grid>
-          );
+          )
         })}
       </Grid.Container>
     </div>
-  );
-};
+  )
+}
 
-export default WeeklyTrends;
+export default WeeklyTrends

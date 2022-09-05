@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import HeroImg from './../../public/img/Hero.png';
-import { css, Button, Grid, Spacer } from '@nextui-org/react';
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import HeroImg from '@public/img/Hero.png'
+import { css, Button, Grid, Spacer } from '@nextui-org/react'
 
 const Hero = () => {
-  const [imgShow, setImgShow] = useState(true);
+  const [imgShow, setImgShow] = useState(true)
 
   useEffect(() => {
     function handleResize() {
-      window.innerWidth < 1200 ? setImgShow(false) : setImgShow(true);
+      window.innerWidth < 1200 ? setImgShow(false) : setImgShow(true)
     }
 
-    window.addEventListener('resize', handleResize);
-  });
+    window.addEventListener('resize', handleResize)
+  })
 
   return (
     <div className="bg-black flex flex-nowrap justify-between items-center text-white p-16">
@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
