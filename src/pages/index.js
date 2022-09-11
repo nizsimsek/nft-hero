@@ -7,17 +7,16 @@ import WeeklyTrends from '@components/WeeklyTrends'
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-black">
       <Head>
         <title>NFT KING</title>
       </Head>
 
       <Header />
-      <hr className="bg-[#333333]" />
       <Hero />
       <WeeklyTrends />
 
       <Footer />
-    </>
+    </div>
   )
 }

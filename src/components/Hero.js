@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
-import HeroImg from '@public/img/Hero.png'
-import { css, Button, Grid, Spacer } from '@nextui-org/react'
+import { Button, Spacer } from '@nextui-org/react'
+import HeroImage from './HeroImage'
 
 const Hero = () => {
   const [imgShow, setImgShow] = useState(true)
@@ -15,11 +14,10 @@ const Hero = () => {
   })
 
   return (
-    <div className="bg-black flex flex-nowrap justify-between items-center text-white p-16">
-      <div className="xs:w-full sm:w-full md:w-full lg:w-full xl:w-1/2 max-w-[700px] flex flex-col m-auto">
-        <span className="font-bold text-[48px] lg:text-[72px] xl:text-[72px]">
-          Discover & Collect <span className="text-[#F7FC0E]">Super Rare</span>{' '}
-          Digital Artworks
+    <div className="flex flex-nowrap justify-between items-center text-white px-16 py-32">
+      <div className="w-full max-w-[700px] flex flex-col m-auto">
+        <span className="font-bold text-5xl lg:text-7xl py-8">
+          Discover & Collect <span style={{ background: 'linear-gradient(90deg, rgba(251,185,88,1) 0%, rgba(251,238,29,1) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Super Rare</span> Digital Artworks
         </span>
         <span className="max-w-[520px] text-lg">
           The largest NFT marketplace. Authentic and truly unique digital
@@ -45,9 +43,7 @@ const Hero = () => {
         </div>
       </div>
       {imgShow && (
-        <div className="w-1/2 max-w-[700px] m-auto">
-          <Image src={HeroImg} alt="Picture of the author" />
-        </div>
+        <HeroImage />
       )}
     </div>
   )

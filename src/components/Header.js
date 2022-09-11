@@ -3,8 +3,8 @@ import { Button, Navbar, Spacer, Text } from '@nextui-org/react';
 
 const Header = () => {
   return (
-    <div className="bg-black h-[100px] flex justify-around items-center text-white">
-      <Navbar.Content className="flex nav-links min-w-[300px]" hideIn="md">
+    <div className="bg-black z-[500] fixed w-full h-[88px] flex justify-around text-white border-b-2 border-[#333]">
+      <Navbar.Content className="flex nav-links min-w-[400px]" hideIn="md">
         <Link href="/marketplace">
           <a className="text-white">Marketplace</a>
         </Link>
@@ -26,7 +26,7 @@ const Header = () => {
       >
         NFT KING
       </Navbar.Content>
-      <Navbar.Content className="min-w-[300px] flex justify-end" hideIn="md">
+      <Navbar.Content className="min-w-[400px] flex justify-end" hideIn="md">
         <Button shadow color="gradient" auto rounded>
           Connect Wallet
         </Button>

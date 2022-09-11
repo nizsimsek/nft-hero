@@ -3,7 +3,7 @@ import Weekly1 from '@public/img/Weekly1.svg'
 import Weekly2 from '@public/img/Weekly2.svg'
 import Weekly3 from '@public/img/Weekly3.svg'
 import Weekly4 from '@public/img/Weekly4.svg'
-import { css, Button, Grid, Spacer } from '@nextui-org/react'
+import { Grid, Spacer } from '@nextui-org/react'
 import WeeklyCard from './WeeklyCard'
 
 const weeklyTrends = [
@@ -35,30 +35,35 @@ const weeklyTrends = [
 
 const WeeklyTrends = () => {
   return (
-    <div className="bg-black flex flex-wrap justify-center text-white p-16">
-      <div className="w-full lg:w-1/2 xl:w-1/2 text-center">
-        <span className="text-3xl md:text-6xl lg:text-6xl xl:text-6xl font-bold max-w-[600px]">
-          Trending This Week
-        </span>
+    <div className="text-white p-0">
+      <div className="flex flex-col lg:flex-row w-full justify-center my-0 md:my-10">
+        <div className="w-full max-w-[650px] m-auto lg:m-0 lg:ml-auto flex text-center">
+          <div className="w-full max-w-[650px] mt-3 lg:m-0 self-center">
+            <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
+              Trending This Week
+            </span>
+          </div>
+        </div>
+        <div className="w-full max-w-[650px] m-auto lg:m-0 lg:mr-auto">
+          <div className="w-full max-w-[500px] px-6 mt-3 lg:m-0 self-center flex m-auto">
+            <span className="text-lg text-gray-500">
+              Various kinds of Artwork categories that are trending this week. The
+              trend will be reset every week. Don’t miss out on the best artworks
+              every week
+            </span>
+          </div>
+        </div>
       </div>
-      <div className="w-full lg:w-1/2 xl:w-1/2 px-6 mt-3 lg:m-0 xl:m-0">
-        <span className="text-lg text-gray-500 max-w-[500px]">
-          Various kinds of Artwork categories that are trending this week. The
-          trend will be reset every week. Don’t miss out on the best artworks
-          every week
-        </span>
-      </div>
-      <Grid.Container gap={2}>
+      <Grid.Container gap={8}>
         {weeklyTrends.map((item, index) => {
           return (
             <Grid
-              xl={3}
-              lg={3}
+              xl={6}
+              lg={6}
               md={6}
               sm={6}
               xs={12}
-              justify="center"
-              css={{ margin: '100px 0' }}
+              css={{ display: 'flex !important' }}
               key={index}
             >
               <WeeklyCard
@@ -66,6 +71,7 @@ const WeeklyTrends = () => {
                 username={item.username}
                 price={item.price}
                 nft={item.nft}
+                index={index}
               />
             </Grid>
           )

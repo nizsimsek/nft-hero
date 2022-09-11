@@ -1,16 +1,11 @@
-import { Button, Input, css } from '@nextui-org/react';
+import { Button } from '@nextui-org/react';
 
 const Footer = () => {
   return (
-    <div className="bg-black lg:p-24 xl:p-24 p-8">
-      <div
-        className="w-full h-[400px] flex flex-col items-center place-content-center border-2 p-4"
-        style={{
-          borderRadius: '15px',
-        }}
-      >
+    <div className="p-16 lg:p-32 max-w-7xl lg:max-w-full m-auto">
+      <div className="w-full backdrop-blur-lg bg-white/10 m-auto h-[400px] flex flex-col items-center place-content-center border-2 p-16 rounded-[15px]">
         <div className="flex flex-col">
-          <span className="text-4xl font-semibold text-white text-center">
+          <span className="text-2xl md:text-4xl font-semibold text-white text-center">
             Never miss a drop!
           </span>
           <span className="text-slate-500 mt-4 p-4">
@@ -18,22 +13,19 @@ const Footer = () => {
             about upcoming drops
           </span>
         </div>
-        <div className="flex justify-center mt-12 w-full">
-          <input
-            placeholder="Enter your email address"
-            type="email"
-            className="bg-slate-800 p-4 subscribe-input"
-            style={{
-              borderRadius: '40px',
-              width: '100%',
-              maxWidth: '500px',
-              height: '40px',
-              color: '#FFF',
-            }}
-          />
-          <Button auto color="gradient" rounded className="ml-8">
-            Subscribe
-          </Button>
+        <div className="flex flex-col md:flex-row justify-center my-6 w-full">
+          <div className="w-full max-w-[500px]">
+            <input
+              placeholder="Enter your email address"
+              type="email"
+              className="bg-slate-800 p-4 subscribe-input w-full rounded-[40px] h-10 text-white"
+            />
+          </div>
+          <div>
+            <Button auto color="gradient" rounded className="mx-auto my-4 md:my-0 md:ml-4">
+              Subscribe
+            </Button>
+          </div>
         </div>
       </div>
     </div>

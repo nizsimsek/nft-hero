@@ -1,32 +1,20 @@
 import Image from 'next/image';
 import { Button } from '@nextui-org/react';
 
-const WeeklyCard = ({ fullName, username, price, nft }) => {
+const WeeklyCard = ({ fullName, username, price, nft, index }) => {
+
   return (
-    <div className="relative min-w-[300px]">
-      <div className="m-auto -z-10 w-5/6 h-full">
+    <div className={`min-w-[350px] w-full max-w-[470px] m-auto ${index % 2 == 0 ? 'lg:ml-auto lg:m-0' : 'lg:mr-auto lg:m-0'}`}>
+      <div className="text-center px-8">
         <Image src={nft} alt={fullName} responsive="true" />
       </div>
-      <div
-        style={{
-          borderRadius: '15px',
-          backgroundColor: 'rgba(0,0,0, 1)',
-          filter: 'blur(1px)',
-        }}
-        className="absolute w-full h-[120px] -bottom-20"
-      ></div>
-      <div
-        className="absolute w-full h-[120px] flex items-center -bottom-20 border-2 p-4"
-        style={{
-          borderRadius: '15px',
-        }}
-      >
-        <div className="flex flex-col whitespace-nowrap w-1/2">
+      <div className="mx-auto h-[120px] w-full min-w-[350px] max-w-[470px] flex items-center -mt-12 border-2 p-4 backdrop-blur-lg bg-white/10 rounded-[15px]">
+        <div className="flex flex-col whitespace-nowrap w-full">
           <span className="m-0 font-bold md:text-base xl:text-2xl">{fullName}</span>
           <span className="text-slate-500">@{username}</span>
           <span className="text-[#F7FC0E] font-bold  md:text-base xl:text-xl">{price}</span>
         </div>
-        <div className="flex justify-end self-end w-1/2">
+        <div className="flex justify-end w-full">
           <Button auto color="gradient" rounded>
             Collect Now
           </Button>
