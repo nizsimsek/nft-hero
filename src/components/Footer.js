@@ -2,8 +2,8 @@ import { Button } from '@nextui-org/react';
 
 const Footer = () => {
   return (
-    <div className="p-16 lg:p-32 max-w-7xl lg:max-w-full m-auto">
-      <div className="w-full backdrop-blur-lg bg-white/10 m-auto h-[400px] flex flex-col items-center place-content-center border-2 p-16 rounded-[15px]">
+    <div className="p-8 md:p-16 lg:p-32 max-w-7xl lg:max-w-full m-auto w-full">
+      <div className="min-w-[250px] w-full backdrop-blur-lg bg-white/10 m-auto min-h-[400px] h-full flex flex-col items-center place-content-center border-2 p-8 md:p-16 rounded-[15px]">
         <div className="flex flex-col">
           <span className="text-2xl md:text-4xl font-semibold text-white text-center">
             Never miss a drop!

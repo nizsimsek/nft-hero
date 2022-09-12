@@ -1,42 +1,11 @@
-import Image from 'next/image'
-import Weekly1 from '@public/img/Weekly1.svg'
-import Weekly2 from '@public/img/Weekly2.svg'
-import Weekly3 from '@public/img/Weekly3.svg'
-import Weekly4 from '@public/img/Weekly4.svg'
-import { Grid, Spacer } from '@nextui-org/react'
-import WeeklyCard from './WeeklyCard'
-
-const weeklyTrends = [
-  {
-    fullName: 'Miles Grogosters',
-    username: 'rominolegs',
-    price: '4.99 ETH',
-    nft: Weekly1
-  },
-  {
-    fullName: 'Reox Fancxy',
-    username: 'hibnastiar',
-    price: '3.27 ETH',
-    nft: Weekly2
-  },
-  {
-    fullName: 'Miles Grogosters',
-    username: 'senjadisini',
-    price: '4.20 ETH',
-    nft: Weekly3
-  },
-  {
-    fullName: 'Tuinz Rey',
-    username: 'albertov',
-    price: '2.99 ETH',
-    nft: Weekly4
-  }
-]
+import { Grid } from '@nextui-org/react'
+import WeeklyCard from '@components/WeeklyCard'
+import { weeklyTrends } from '@/public/svg'
 
 const WeeklyTrends = () => {
   return (
-    <div className="text-white p-0">
-      <div className="flex flex-col lg:flex-row w-full justify-center my-0 md:my-10">
+    <div className="min-w-[350px] text-white px-0 md:px-8 w-full">
+      <div className="flex flex-col md:flex-row w-full justify-center">
         <div className="w-full max-w-[650px] m-auto lg:m-0 lg:ml-auto flex text-center">
           <div className="w-full max-w-[650px] mt-3 lg:m-0 self-center">
             <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
@@ -67,10 +36,7 @@ const WeeklyTrends = () => {
               key={index}
             >
               <WeeklyCard
-                fullName={item.fullName}
-                username={item.username}
-                price={item.price}
-                nft={item.nft}
+                item={item}
                 index={index}
               />
             </Grid>
