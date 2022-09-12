@@ -1,10 +1,10 @@
 import { Grid } from '@nextui-org/react'
-import WeeklyCard from './WeeklyCard'
+import WeeklyCard from '@components/WeeklyCard'
 import { weeklyTrends } from '@/public/svg'
 
 const WeeklyTrends = () => {
   return (
-    <div className="text-white px-0 md:px-8 w-full">
+    <div className="min-w-[350px] text-white px-0 md:px-8 w-full">
       <div className="flex flex-col md:flex-row w-full justify-center">
         <div className="w-full max-w-[650px] m-auto lg:m-0 lg:ml-auto flex text-center">
           <div className="w-full max-w-[650px] mt-3 lg:m-0 self-center">
@@ -36,10 +36,7 @@ const WeeklyTrends = () => {
               key={index}
             >
               <WeeklyCard
-                fullName={item.fullName}
-                username={item.username}
-                price={item.price}
-                nft={item.nft}
+                item={item}
                 index={index}
               />
             </Grid>

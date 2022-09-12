@@ -1,10 +1,10 @@
-import Weekly1 from '@public/svg/Weekly1.svg'
-import Weekly2 from '@public/svg/Weekly2.svg'
-import Weekly3 from '@public/svg/Weekly3.svg'
-import Weekly4 from '@public/svg/Weekly4.svg'
-import MetaMask from '@public/svg/MetaMask.svg'
-import Binance from '@public/svg/Binance.svg'
-import Coinbase from '@public/img/Coinbase.png'
+import Weekly1 from '@public/svg/weekly1.svg'
+import Weekly2 from '@public/svg/weekly2.svg'
+import Weekly3 from '@public/svg/weekly3.svg'
+import Weekly4 from '@public/svg/weekly4.svg'
+import MetaMask from '@public/svg/metamask.svg'
+import Binance from '@public/svg/binance.svg'
+import Coinbase from '@public/img/coinbase.png'
 
 export const weeklyTrends = [
     {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Spacer } from '@nextui-org/react'
-import HeroImage from './HeroImage'
+import HeroImage from '@components/HeroImage'
 
 const Hero = () => {
 

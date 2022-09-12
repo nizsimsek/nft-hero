@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import { Button } from '@nextui-org/react';
 
-const WeeklyCard = ({ fullName, username, price, nft, index }) => {
+const WeeklyCard = ({ item, index }) => {
+
+  const { fullName, username, price, nft } = item;
 
   return (
     <div className={`min-w-[250px] w-full max-w-[470px] m-auto ${index % 2 == 0 ? 'lg:ml-auto lg:m-0' : 'lg:mr-auto lg:m-0'}`}>
       <div className="text-center px-8">
-        <Image src={nft} alt={fullName} responsive="true" />
+        <Image src={nft} alt={fullName} />
       </div>
       <div className="mx-auto min-h-[120px] h-auto w-full min-w-[250px] max-w-[470px] flex flex-col sm:flex-row justify-start items-center -mt-12 border-2 p-4 backdrop-blur-lg bg-white/10 rounded-[15px]">
         <div className="flex flex-col whitespace-nowrap w-full">

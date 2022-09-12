@@ -1,6 +1,6 @@
-import HeroImg1 from '@public/img/Hero1.png'
-import HeroImg2 from '@public/img/Hero2.png'
-import HeroImg3 from '@public/img/Hero3.png'
+import HeroImg1 from '@public/img/hero1.png'
+import HeroImg2 from '@public/img/hero2.png'
+import HeroImg3 from '@public/img/hero3.png'
 
 export const heroImages = [
     {
