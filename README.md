@@ -1,5 +1,5 @@
 ### Projenin geliştirmesi hala devam etmektedir.
-### Güncel hali : https://nft-hero.vercel.app/
+### Güncel hali : https://nft-hero.nizamettinsimsek.com.tr/
 
 ---
 
