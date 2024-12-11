@@ -1,38 +1,32 @@
-import Link from 'next/link';
-import { Button, Navbar, Spacer, Text } from '@nextui-org/react';
+import Link from 'next/link'
+import { Button, Navbar, Spacer, Text } from '@nextui-org/react'
 
 const Header = () => {
   return (
     <div className="bg-black z-[500] fixed w-full h-[88px] flex justify-around text-white border-b-2 border-[#333]">
       <Navbar.Content className="flex nav-links min-w-[400px]" hideIn="md">
         <Link href="/marketplace">
-          <a className="text-white">Marketplace</a>
+          <span className="text-white">Marketplace</span>
         </Link>
         <Spacer />
         <Link href="/creators">
-          <a className="text-white">Creators</a>
+          <span className="text-white">Creators</span>
         </Link>
         <Spacer />
         <Link href="/community">
-          <a className="text-white">Community</a>
+          <span className="text-white">Community</span>
         </Link>
       </Navbar.Content>
-      <Text className="m-auto" showIn="md">
-        <span className="text-white text-3xl font-bold">NFT KING</span>
-      </Text>
-      <Navbar.Content
-        className="font-bold m-auto whitespace-nowrap text-3xl"
-        hideIn="md"
-      >
+      <Navbar.Content className="font-bold whitespace-nowrap text-3xl">
         NFT KING
       </Navbar.Content>
-      <Navbar.Content className="min-w-[400px] flex justify-end" hideIn="md">
+      <Navbar.Content className="flex justify-end" hideIn="md">
         <Button shadow color="gradient" auto rounded>
           Connect Wallet
         </Button>
       </Navbar.Content>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

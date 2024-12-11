@@ -1,6 +1,7 @@
-import { Grid } from '@nextui-org/react'
+import { Button, Grid } from '@nextui-org/react'
 import WeeklyCard from '@components/WeeklyCard'
 import { weeklyTrends } from '@/public/svg'
+import Image from 'next/image'
 
 const WeeklyTrends = () => {
   return (
@@ -16,33 +17,25 @@ const WeeklyTrends = () => {
         <div className="w-full max-w-[650px] m-auto lg:m-0 lg:mr-auto">
           <div className="w-full max-w-[500px] px-6 mt-3 lg:m-0 self-center flex m-auto">
             <span className="text-lg text-gray-500">
-              Various kinds of Artwork categories that are trending this week. The
-              trend will be reset every week. Don’t miss out on the best artworks
-              every week
+              Various kinds of Artwork categories that are trending this week.
+              The trend will be reset every week. Don’t miss out on the best
+              artworks every week
             </span>
           </div>
         </div>
       </div>
-      <Grid.Container gap={8}>
+      <div className="flex flex-wrap">
         {weeklyTrends.map((item, index) => {
           return (
-            <Grid
-              xl={6}
-              lg={6}
-              md={6}
-              sm={6}
-              xs={12}
-              css={{ display: 'flex !important' }}
+            <div
+              className="flex xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-1/2 w-full p-12"
               key={index}
             >
-              <WeeklyCard
-                item={item}
-                index={index}
-              />
-            </Grid>
+              <WeeklyCard item={item} index={index} />
+            </div>
           )
         })}
-      </Grid.Container>
+      </div>
     </div>
   )
 }

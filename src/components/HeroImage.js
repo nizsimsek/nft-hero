@@ -42,7 +42,7 @@ const HeroImage = () => {
                         return (
                             <div key={index} className="flex flex-col whitespace-nowrap w-full items-center">
                                 <Link href={coinMarket.link}>
-                                    <a className="text-white flex h-8" target="_blank">
+                                    <span className="text-white flex h-8" target="_blank">
                                         <img
                                             src={coinMarket.image}
                                             alt={coinMarket.name}
@@ -55,7 +55,7 @@ const HeroImage = () => {
                                         <span style={coinMarket.textStyle}>
                                             {coinMarket.name}
                                         </span>
-                                    </a>
+                                    </span>
                                 </Link>
                             </div>
                         )
