@@ -20,7 +20,7 @@ const Header = () => {
       <Navbar.Content className="font-bold whitespace-nowrap text-3xl">
         NFT KING
       </Navbar.Content>
-      <Navbar.Content className="flex justify-end" hideIn="md">
+      <Navbar.Content className="flex justify-end min-w-[400px]" hideIn="md">
         <Button shadow color="gradient" auto rounded>
           Connect Wallet
         </Button>
